@@ -1,0 +1,8 @@
+# 运行时日志
+tray.log
+*.log
+
+# 编译产物（可运行的 exe 和素材打包在 Releases 里）
+*.exe
+bin/
+obj/
