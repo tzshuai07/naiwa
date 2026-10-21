@@ -17,6 +17,9 @@
 
 会弹一次 UAC，点「是」——原因见下面「启动」一节。
 
+`奶蛙.exe` 带一个自签名证书（`CN=tzshuai07`），不是 CA 签发的，所以 Windows 仍会
+显示「未知发布者」，属正常现象。
+
 需要 .NET Framework 4.0 或更高（Windows 10 / 11 自带 4.8），不用另外装运行时。
 
 ## 目录结构
@@ -24,7 +27,7 @@
 | 路径 | 内容 |
 | --- | --- |
 | `naiwa_pet/pet/NaiwaPet.cs` | 源码（C# / WinForms，61 KB，单文件） |
-| `naiwa_pet/pet/奶蛙.exe` | 编译好的主程序（92 KB，.NET Framework 4.0+） |
+| `naiwa_pet/pet/奶蛙.exe` | 编译好的主程序（98 KB，附自签名证书，.NET Framework 4.0+） |
 | `naiwa_pet/pet/frames/` | 程序用的 438 张 PNG，322×412（0.5 倍，已预乘 alpha） |
 | `naiwa_pet/pet/naiwa.wav` | 程序播放的音频，16bit PCM 立体声 44.1kHz |
 | `naiwa_pet/pet/naiwa.ico` | 托盘 / 窗口图标（取第 0 帧裁到 alpha 外框） |
