@@ -2,7 +2,6 @@
 tray.log
 *.log
 
-# 编译产物（可运行的 exe 和素材打包在 Releases 里）
-*.exe
+# 构建中间产物（编译好的 奶蛙.exe 是仓库的一部分，不要忽略）
 bin/
 obj/

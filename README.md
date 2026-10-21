@@ -9,8 +9,11 @@
 
 ## 下载
 
-不想编译的话，去 [Releases](https://github.com/tzshuai07/naiwa/releases) 下最新的
-`naiwa-pet-v1.0.0.zip`，解压后双击 `奶蛙.exe`。
+不想编译的话，仓库里就有一份编译好的 `naiwa_pet/pet/奶蛙.exe`，把它和同目录的
+`frames/`、`naiwa.wav` 放在一起就能跑。
+
+想要现成的整包，就去 [Releases](https://github.com/tzshuai07/naiwa/releases) 下最新的
+`naiwa-pet-v1.0.0.zip`，解压后直接双击 `奶蛙.exe`。
 
 会弹一次 UAC，点「是」——原因见下面「启动」一节。
 
@@ -21,6 +24,7 @@
 | 路径 | 内容 |
 | --- | --- |
 | `naiwa_pet/pet/NaiwaPet.cs` | 源码（C# / WinForms，61 KB，单文件） |
+| `naiwa_pet/pet/奶蛙.exe` | 编译好的主程序（92 KB，.NET Framework 4.0+） |
 | `naiwa_pet/pet/frames/` | 程序用的 438 张 PNG，322×412（0.5 倍，已预乘 alpha） |
 | `naiwa_pet/pet/naiwa.wav` | 程序播放的音频，16bit PCM 立体声 44.1kHz |
 | `naiwa_pet/pet/naiwa.ico` | 托盘 / 窗口图标（取第 0 帧裁到 alpha 外框） |
@@ -43,8 +47,7 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /nologo /target:winexe /
     /r:System.Windows.Forms.dll /r:System.Drawing.dll NaiwaPet.cs
 ```
 
-`/unsafe` 是必须的（逐像素渲染用了指针）。编译产物 `奶蛙.exe` 不进仓库，
-它和运行需要的素材一起打在 Release 的 zip 里。
+`/unsafe` 是必须的（逐像素渲染用了指针）。重新编译会直接覆盖仓库里那份 `奶蛙.exe`。
 
 `NaiwaPet.cs` 开头还留了两个调试入口：
 
